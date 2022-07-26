@@ -13,13 +13,13 @@ const Wrap = styled.div`
   align-items: center;
 `;
 
-const MenuWrap = styled.div`
+const MenuWrap = styled.ul`
   width: 45%;
   height: 100%;
   display: flex;
   align-items: center;
 `;
-const Menu = styled.div`
+const Menu = styled.li`
   margin-right: 45px;
   a {
     font-size: 18px;
@@ -41,7 +41,7 @@ const Logo = styled.img`
   height: 65px;
   border-radius: 50%;
 `;
-const ClientMenuWrap = styled.div`
+const ClientMenuWrap = styled.ul`
   width: 45%;
   height: 100%;
   align-items: center;
@@ -49,7 +49,7 @@ const ClientMenuWrap = styled.div`
   align-items: center;
   justify-content: right;
 `;
-const ClientMenu = styled.div`
+const ClientMenu = styled.li`
   margin-left: 20px;
   a {
     font-size: 16px;

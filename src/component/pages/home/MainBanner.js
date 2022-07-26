@@ -14,6 +14,7 @@ const ConWrap = styled.div`
 const TextWrap = styled.div`
   width: 50%;
   padding-top: 120px;
+  min-width: 600px;
 `;
 
 const SubTitle = styled.div`
