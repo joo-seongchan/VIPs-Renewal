@@ -5,7 +5,6 @@ const Sheader = styled.div`
   padding: 30px 30px;
 `;
 const Wrap = styled.div`
-  border: 1px solid #707070;
   width: 100%;
   height: 80px;
   padding: 0 50px;

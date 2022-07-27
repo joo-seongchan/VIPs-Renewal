@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mainstyle } from "../../../styles/GlobalStyle";
 import { section1Db } from "./mainDb";
 
 const Section = styled.section`
@@ -33,7 +34,7 @@ const ConWrap = styled.div`
 `;
 const Con = styled.div`
   min-width: 400px;
-  border: 1px solid rgba(112, 112, 112, 1);
+  border: 1px solid rgba(112, 112, 112, 0.2);
 `;
 const Img = styled.img`
   width: 100%;
@@ -79,18 +80,34 @@ const ButtonWrap = styled.div`
 `;
 
 const Button = styled.div`
-  width: 340px;
-  height: 55px;
+  width: 260px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
   a {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    border: 1px solid rgba(112, 112, 112, 1);
+    border: 1px solid rgba(112, 112, 112, 0.2);
   }
+  &:hover {
+    p {
+      transform: translateX(0);
+    }
+  }
+`;
+const BtnCover = styled.p`
+  width: 100%;
+  height: 100%;
+  background-color: ${mainstyle.mainColor};
+  position: absolute;
+  transform: translateX(-100%);
+  transition: 0.2s;
 `;
 
 export const Section1 = () => {
@@ -98,7 +115,7 @@ export const Section1 = () => {
     <Section>
       <Title>ENJOY STEAK</Title>
       <BoxWrap>
-        <Box>TOMAHAWK</Box>
+        <Box style={{ background: "black" }}>TOMAHAWK</Box>
         <Box>PORTERHOUSE</Box>
         <Box>L-BONE</Box>
         <Box>TENDERLION</Box>
@@ -123,6 +140,7 @@ export const Section1 = () => {
       </ConWrap>
       <ButtonWrap>
         <Button>
+          <BtnCover></BtnCover>
           <Link to="/steak">자세히보기</Link>
         </Button>
       </ButtonWrap>

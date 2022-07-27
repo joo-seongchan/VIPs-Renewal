@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Section = styled.div`
   width: 100%;
+  margin-bottom: 150px;
 `;
 const ConWrap = styled.div`
   width: 100%;
@@ -19,7 +20,7 @@ const Title = styled.div`
 `;
 const SubTitle = styled.div`
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 300;
   color: rgba(172, 170, 170, 1);
   line-height: 40px;
   span {
@@ -34,14 +35,26 @@ const NavWrap = styled.div`
   font-weight: 400;
   opacity: 0.8;
 `;
-
-const Circle = styled.div`
-  width: 285px;
-  height: 285px;
-  background: url(img/circle.png) no-repeat center/cover;
+const CircleWrap = styled.div`
   position: relative;
-  top: -80px;
-  left: 140px;
+  margin-top: 30px;
+
+  &:hover {
+    img:nth-child(1) {
+      transform: translate(90px, 0) scale(1.1);
+    }
+    img:nth-child(2) {
+      transform: translate(-80px, -40px);
+    }
+  }
+`;
+const Circle = styled.img`
+  transform: translate(90px, 0);
+  transition: 0.2s;
+`;
+const Arrow = styled.img`
+  transform: translate(-100px, -40px);
+  transition: 0.2s;
 `;
 
 const ImgWrap = styled.div`
@@ -90,7 +103,10 @@ export const Section2 = () => {
           </SubTitle>
           <NavWrap>
             맛있고 저렴하게 빕스를 즐기는 방법! 제휴/할인 카드를 확인하세요
-            <Circle></Circle>
+            <CircleWrap>
+              <Circle src="img/circle.png" />
+              <Arrow src="img/arrow.png" />
+            </CircleWrap>
           </NavWrap>
         </TextWrap>
         <ImgWrap>

@@ -3,6 +3,7 @@ import reset from "styled-reset";
 
 export const mainstyle = {
   padding: "0 70px",
+  mainColor: "rgba(190,44,55,1)",
 };
 
 export const GlobalStyle = createGlobalStyle`
