@@ -117,33 +117,35 @@ const ImgCover = styled.div`
 
 export const MainBanner = () => {
   return (
-    <Section>
+    <>
       <Bg>
         <Bg2></Bg2>
       </Bg>
-      <ConWrap>
-        <TextWrap>
-          <SubTitle>My No.1 Steak House Vips</SubTitle>
-          <MainTitle>STEAKE HOUSE</MainTitle>
-          <Text>
-            빕스만의 특별한 노하우로 만들어 더 맛있는 빕스의 스페셜 스테이크
-            <br />
-            그잊을 수 없는 맛을 지금 경험하세요!
-          </Text>
-          <Button>
-            <ButtonCover></ButtonCover>
-            <Link to="/steak">
-              더보기 &nbsp;
-              <span>
-                <FontAwesomeIcon icon={faPlus} />
-              </span>
-            </Link>
-          </Button>
-        </TextWrap>
-        <Img>
-          <ImgCover></ImgCover>
-        </Img>
-      </ConWrap>
-    </Section>
+      <Section>
+        <ConWrap>
+          <TextWrap>
+            <SubTitle>My No.1 Steak House Vips</SubTitle>
+            <MainTitle>STEAKE HOUSE</MainTitle>
+            <Text>
+              빕스만의 특별한 노하우로 만들어 더 맛있는 빕스의 스페셜 스테이크
+              <br />
+              그잊을 수 없는 맛을 지금 경험하세요!
+            </Text>
+            <Button>
+              <ButtonCover></ButtonCover>
+              <Link to="/steak">
+                더보기 &nbsp;
+                <span>
+                  <FontAwesomeIcon icon={faPlus} />
+                </span>
+              </Link>
+            </Button>
+          </TextWrap>
+          <Img>
+            <ImgCover></ImgCover>
+          </Img>
+        </ConWrap>
+      </Section>
+    </>
   );
 };

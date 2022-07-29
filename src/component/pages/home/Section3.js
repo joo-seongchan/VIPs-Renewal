@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Section = styled.section``;
+const Section = styled.section`
+  margin-bottom: 150px;
+`;
 const Title = styled.h1`
   font-size: 70px;
   font-weight: 600;
