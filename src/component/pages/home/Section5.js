@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { mainstyle } from "../../../styles/GlobalStyle";
 
-const Section = styled.section``;
+const Section = styled.section`
+  margin-bottom: 200px;
+`;
 const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
@@ -62,22 +64,24 @@ export const Section5 = () => {
     <Section>
       <Wrap>
         <TextWrap>
-          <Title>NOTICE</Title>
+          <Title>STORE</Title>
           <Text>
-            VIPS 매장을 쉽게 빠르게 찾아보세요!
+            우리동네에 가장 가까운 VIPS는?
             <br />
-            <span>STORE </span>
+            <span>매장안내</span>
           </Text>
           <Text>
-            진행준인 이벤트를 즐겨보세요!
+            소중한 우리아이의 첫 생일을, 빕스에서 특별한 추억을 만드세요!
             <br />
-            <span>EVENT</span>
+            <span>돌잔치</span>
           </Text>
 
           <Text>
-            VIPS의 VIP만을 위한 혜택!
+            레스토랑 예절 교육, 쿠키만들기,맛있는 간식만들기등
             <br />
-            <span>MEMBERSHIP</span>
+            즐겁고 유익한 프로그램이 준비되어 있습니다.
+            <br />
+            <span>어린이 체험교실</span>
           </Text>
           <Button>
             <BtnCover></BtnCover>

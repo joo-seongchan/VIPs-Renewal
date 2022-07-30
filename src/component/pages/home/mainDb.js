@@ -36,3 +36,25 @@ export const section1Db = [
     price: "44,500",
   },
 ];
+
+export const placeDb = [
+  {
+    id: 0,
+    place: "해운대점",
+  },
+  {
+    id: 1,
+    place: "광안점",
+  },
+];
+
+export const menuDb = [
+  {
+    id: 0,
+    menu: "VIPS LUNCH",
+  },
+  {
+    id: 1,
+    menu: "VIPS DINNER",
+  },
+];
