@@ -5,6 +5,7 @@ const Section = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 300px;
 `;
 const BgWrap = styled.div`
   width: 685px;
