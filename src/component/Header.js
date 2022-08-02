@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Sheader = styled.div`
-  padding: 30px 30px;
+  padding: 10px 30px;
+  z-index: 9999;
+  position: relative;
 `;
 const Wrap = styled.div`
   width: 100%;
@@ -87,7 +89,7 @@ export const Header = () => {
             <Link to="/store">STORE</Link>
           </Menu>
           <Menu>
-            <Link to="/benefit">BENEFIT</Link>
+            <Link to="/membership">MEMBERSHIP</Link>
           </Menu>
           <Menu>
             <Link to="/reservation">RESERVATION</Link>

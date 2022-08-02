@@ -4,6 +4,7 @@ import { mainstyle } from "../../../styles/GlobalStyle";
 
 const Section = styled.div`
   margin-top: 150px;
+  margin-bottom: 150px;
 `;
 const Name = styled.div`
   font-size: 45px;

@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const SFooter = styled.div`
-  margin-top: 150px;
   padding: 0 30px;
 `;
 const Wrap = styled.div`
