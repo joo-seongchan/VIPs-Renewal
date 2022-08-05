@@ -1,3 +1,6 @@
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import styled from "styled-components";
 import { menuDb, placeDb } from "./mainDb";
 
@@ -100,10 +103,12 @@ const DateWrap = styled.div`
     width: 200px;
     height: 50px;
     border: 1px solid rgba(112, 112, 112, 1);
+    cursor: pointer;
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {
     background: url(img/arrow2.png) no-repeat center;
+    cursor: pointer;
   }
 `;
 const TimeWrap = styled.div`
@@ -116,9 +121,11 @@ const TimeWrap = styled.div`
     width: 200px;
     height: 50px;
     border: 1px solid rgba(112, 112, 112, 1);
+    cursor: pointer;
   }
   input[type="time"]::-webkit-calendar-picker-indicator {
     background: url(img/arrow2.png) no-repeat center;
+    cursor: pointer;
   }
 `;
 
@@ -126,30 +133,36 @@ const ThirdLine = styled.div`
   display: flex;
   margin-bottom: 40px;
 `;
-const MenuWrap = styled.div`
-  margin-right: 15px;
-  select {
-    all: unset;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    width: 200px;
-    height: 50px;
-    border: 1px solid rgba(112, 112, 112, 1);
-    background: url(img/arrow2.png) no-repeat 95% 50%;
-    cursor: pointer;
-    option {
-      background-color: #1d1d1d;
-    }
-  }
-`;
+
 const PeopleWrap = styled.div`
+  margin-right: 15px;
   input {
     all: unset;
     height: 50px;
     box-sizing: border-box;
     width: 100px;
+    border: 1px solid rgba(112, 112, 112, 1);
+    padding: 0 20px;
+  }
+`;
+
+const CountWrap = styled.div`
+  display: flex;
+`;
+const Count = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(112, 112, 112, 1);
+  cursor: pointer;
+`;
+const OrderWrap = styled.div`
+  input {
+    all: unset;
+    width: 375px;
+    height: 50px;
     border: 1px solid rgba(112, 112, 112, 1);
     padding: 0 20px;
   }
@@ -182,6 +195,7 @@ const Img = styled.div`
 const ImgCover = styled.div`
   width: 100%;
   height: 100%;
+
   background: radial-gradient(
     closest-corner,
     rgba(0, 0, 0, 0),
@@ -189,6 +203,7 @@ const ImgCover = styled.div`
   );
 `;
 export const Section4 = () => {
+  const [people, setPeople] = useState(1);
   return (
     <Section>
       <LeftCon>
@@ -224,19 +239,39 @@ export const Section4 = () => {
             </TimeWrap>
           </SecondLine>
           <ThirdLine>
-            <MenuWrap>
-              <Menu>메뉴</Menu>
-              <select>
-                <option value="" selected></option>
-                {menuDb.map((db) => (
-                  <option value={db.id}>{db.menu}</option>
-                ))}
-              </select>
-            </MenuWrap>
             <PeopleWrap>
               <Menu>인원수</Menu>
-              <input></input>
+              <CountWrap>
+                <Count
+                  onClick={() => {
+                    if (people > 1) {
+                      setPeople(people - 1);
+                    }
+                  }}
+                >
+                  <FontAwesomeIcon icon={faMinus} />
+                </Count>
+                <input
+                  style={{
+                    textAlign: "center",
+                    padding: 0,
+                    fontSize: "20px",
+                  }}
+                  value={people}
+                ></input>
+                <Count
+                  onClick={() => {
+                    setPeople(people + 1);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faPlus} />
+                </Count>
+              </CountWrap>
             </PeopleWrap>
+            <OrderWrap>
+              <Menu>요청사항</Menu>
+              <input></input>
+            </OrderWrap>
           </ThirdLine>
           <CheckWrap>
             <input type="checkbox"></input>

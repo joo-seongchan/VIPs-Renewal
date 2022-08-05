@@ -70,7 +70,9 @@ export const SaladSection1 = () => {
       </BgWrap>
       <TextWrap>
         <SubTitle>VIPS</SubTitle>
-        <Title>Unbelievable Taste, VIPS Salad Salad Bar</Title>
+        <Title>
+          Unbelievable Taste <br /> Salad Bar
+        </Title>
         <Text>
           신선함이 가득한 빕스 샐러드바를 마음껏 즐기세요.
           <br />
