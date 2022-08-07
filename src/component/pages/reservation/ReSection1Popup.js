@@ -48,7 +48,7 @@ const Text = styled.div`
   margin-bottom: 50px;
 `;
 
-export const Section4Popup = ({
+export const ReSection1Popup = ({
   namedata,
   phonedata,
   placedata,

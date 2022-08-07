@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { mainstyle } from "../../../styles/GlobalStyle";
 import { Section4Popup } from "./Section4Popup";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   width: 100%;
@@ -211,6 +212,80 @@ const ImgCover = styled.div`
     rgba(14, 14, 14, 0.83)
   );
 `;
+
+const PopUp = styled.div`
+  width: 70%;
+  min-width: 1300px;
+  height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transform: translate(-50%, -50%);
+  padding: 50px 100px;
+  z-index: 9999;
+`;
+
+const PopTitle = styled.div`
+  font-size: 60px;
+  font-weight: 700;
+  width: 100%;
+  color: ${mainstyle.mainColor};
+  margin-bottom: 50px;
+  letter-spacing: -0.2rem;
+`;
+const LeftPop = styled.div`
+  width: 70%;
+  /* background-color: red; */
+  height: 100%;
+`;
+
+const RightPop = styled.img`
+  position: absolute;
+  bottom: 50px;
+  right: -250px;
+`;
+
+const PopConwrap = styled.div`
+  display: flex;
+  position: relative;
+`;
+
+const ButtonWrap = styled.div`
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+`;
+const Button1 = styled.div`
+  width: 45%;
+  height: 100%;
+  background-color: ${mainstyle.mainColor};
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+`;
+const Button2 = styled.div`
+  width: 45%;
+  height: 100%;
+  border: 1px solid rgba(112, 112, 112, 1);
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+`;
 export const Section4 = () => {
   const [people, setPeople] = useState(1);
   const [namedata, setNamedata] = useState("");
@@ -222,17 +297,6 @@ export const Section4 = () => {
   const [orderdata, setOrderdata] = useState("");
   const [popup, setPopup] = useState("none");
 
-  const {
-    register,
-    handleSubmit,
-    getValues,
-    formState: { errors, isValid },
-    setError,
-    clearErrors,
-  } = useForm({
-    mode: "onChange",
-  });
-
   let today = new Date();
   let mintoday = `${today.getFullYear()}-${
     today.getMonth() + 1 > 9
@@ -240,10 +304,23 @@ export const Section4 = () => {
       : "0" + `${today.getMonth() + 1}`
   }-${today.getDate() > 9 ? today.getDate() : "0" + `${today.getDate()}`}`;
 
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors, isValid },
+    setError,
+    clearErrors,
+    reset,
+  } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      date: mintoday,
+    },
+  });
   const submit = () => {
     const { name, phone, place, date, time, peoplecount, order, check } =
       getValues();
-
     setNamedata(name);
     setPhonedata(phone);
     setPlacedata(place);
@@ -252,6 +329,8 @@ export const Section4 = () => {
     setPeopledata(people);
     setOrderdata(order);
     setPopup("block");
+    reset();
+    setPeople("1");
   };
   return (
     <Section>
@@ -417,16 +496,41 @@ export const Section4 = () => {
       <Img>
         <ImgCover />
       </Img>
-      <Section4Popup
-        namedata={namedata}
-        phonedata={phonedata}
-        placedata={placedata}
-        datedata={datedata}
-        timedata={timedata}
-        peopledata={peopledata}
-        orderdata={orderdata}
-        popup={popup}
-      />
+      <PopUp style={{ display: `${popup}` }}>
+        <PopTitle>예약이 완료 되었습니다!</PopTitle>
+        <PopConwrap>
+          <LeftPop>
+            <Section4Popup
+              namedata={namedata}
+              phonedata={phonedata}
+              placedata={placedata}
+              datedata={datedata}
+              timedata={timedata}
+              peopledata={peopledata}
+              orderdata={orderdata}
+              popup={popup}
+            />
+            <ButtonWrap>
+              <Button1
+                onClick={() => {
+                  setPopup("none");
+                }}
+              >
+                <Link to="/">홈으로</Link>
+              </Button1>
+
+              <Button2
+                onClick={() => {
+                  setPopup("none");
+                }}
+              >
+                <Link to="/">예약 확인</Link>
+              </Button2>
+            </ButtonWrap>
+          </LeftPop>
+          <RightPop src="img/popupimg.png"></RightPop>
+        </PopConwrap>
+      </PopUp>
     </Section>
   );
 };
