@@ -24,7 +24,7 @@ const ConWrap = styled.div`
 const Box = styled.div`
   width: 100%;
   height: 560px;
-  background-color: rgba(77, 77, 77, 1);
+  background-color: black;
   padding-top: 85px;
   padding-left: 100px;
   border-top-right-radius: 25px;

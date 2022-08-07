@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { mainstyle } from "../../../styles/GlobalStyle";
+import { Section4Popup } from "./Section4Popup";
 
 const Section = styled.section`
   width: 100%;
@@ -212,6 +213,15 @@ const ImgCover = styled.div`
 `;
 export const Section4 = () => {
   const [people, setPeople] = useState(1);
+  const [namedata, setNamedata] = useState("");
+  const [phonedata, setPhonedata] = useState("");
+  const [placedata, setPlacedata] = useState("");
+  const [datedata, setDatedata] = useState("");
+  const [timedata, setTimedata] = useState("");
+  const [peopledata, setPeopledata] = useState("");
+  const [orderdata, setOrderdata] = useState("");
+  const [popup, setPopup] = useState("none");
+
   const {
     register,
     handleSubmit,
@@ -233,7 +243,15 @@ export const Section4 = () => {
   const submit = () => {
     const { name, phone, place, date, time, peoplecount, order, check } =
       getValues();
-    console.log(date);
+
+    setNamedata(name);
+    setPhonedata(phone);
+    setPlacedata(place);
+    setDatedata(date);
+    setTimedata(time);
+    setPeopledata(people);
+    setOrderdata(order);
+    setPopup("block");
   };
   return (
     <Section>
@@ -284,6 +302,8 @@ export const Section4 = () => {
                   <option value=""></option>
                   <option value="해운대점">해운대점</option>
                   <option value="광안점">광안점</option>
+                  <option value="도곡역점">도곡역점</option>
+                  <option value="대구 수성교점">대구 수성교점</option>
                 </select>
               </PlaceWrap>
               <Error>{errors?.place?.message}</Error>
@@ -397,6 +417,16 @@ export const Section4 = () => {
       <Img>
         <ImgCover />
       </Img>
+      <Section4Popup
+        namedata={namedata}
+        phonedata={phonedata}
+        placedata={placedata}
+        datedata={datedata}
+        timedata={timedata}
+        peopledata={peopledata}
+        orderdata={orderdata}
+        popup={popup}
+      />
     </Section>
   );
 };
