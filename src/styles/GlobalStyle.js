@@ -16,7 +16,6 @@ body{
     color: white;
     letter-spacing: -1px;
     font-family: 'Noto Sans KR', sans-serif;
-    min-width: 1800px;
 }
 a{
     text-decoration: none;
