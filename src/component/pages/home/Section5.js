@@ -88,7 +88,7 @@ export const Section5 = () => {
             <Link to="/benefit">바로가기</Link>
           </Button>
         </TextWrap>
-        <Img src="/img/notice1.png" />
+        <Img src="/img/store1.png" />
       </Wrap>
     </Section>
   );
