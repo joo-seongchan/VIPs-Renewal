@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Section = styled.div`
   position: relative;
   margin-bottom: 300px;
-  min-width: 1900px;
 `;
 const MenuWrap = styled.div`
   width: 500px;

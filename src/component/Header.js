@@ -5,7 +5,6 @@ const Sheader = styled.div`
   padding: 10px 30px;
   z-index: 9999;
   position: relative;
-  min-width: 1800px;
 `;
 const Wrap = styled.div`
   width: 100%;

@@ -8,7 +8,6 @@ import styled from "styled-components";
 
 const SFooter = styled.div`
   padding: 0 30px;
-  min-width: 1800px;
 `;
 const Wrap = styled.div`
   display: flex;

@@ -5,7 +5,6 @@ const Section = styled.div`
   margin-bottom: 300px;
   display: flex;
   justify-content: right;
-  min-width: 1900px;
 `;
 const MenuWrap = styled.div`
   width: 450px;
