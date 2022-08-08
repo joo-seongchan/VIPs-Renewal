@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Section = styled.div`
@@ -60,7 +61,7 @@ const Arrow = styled.img`
 const ImgWrap = styled.div`
   width: 60%;
   height: 750px;
-  background: url(img/restaurant1.png) no-repeat center/cover;
+  background: url(img/benefit1.png) no-repeat center/cover;
 `;
 
 const ImgCover = styled.div`
@@ -72,7 +73,7 @@ const ImgCover = styled.div`
 const Img = styled.div`
   width: 100%;
   height: 100%;
-  background: url(img/restaurant1.png) no-repeat center/cover;
+  background: url(img/benefit1.png) no-repeat center/cover;
 `;
 
 export const Section2 = () => {
@@ -104,8 +105,10 @@ export const Section2 = () => {
           <NavWrap>
             맛있고 저렴하게 빕스를 즐기는 방법! 제휴/할인 카드를 확인하세요
             <CircleWrap>
-              <Circle src="img/circle.png" />
-              <Arrow src="img/arrow.png" />
+              <Link to="/membership">
+                <Circle src="img/circle.png" />
+                <Arrow src="img/arrow.png" />
+              </Link>
             </CircleWrap>
           </NavWrap>
         </TextWrap>

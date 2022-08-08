@@ -106,7 +106,7 @@ export const SteakSection3 = ({ db }) => {
           {db.contents.map((db) => (
             <Img
               style={{
-                backgroundColor: `${db.imgurl}`,
+                background: `url(${db.imgurl}) no-repeat center / cover`,
                 transform: `translateY(${img})`,
               }}
             />

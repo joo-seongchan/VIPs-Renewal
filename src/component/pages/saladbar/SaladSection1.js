@@ -80,7 +80,7 @@ export const SaladSection1 = () => {
           <br /> 하나도 놓치고 싶지 않은 My No.1 Salad bar
         </Text>
       </TextWrap>
-      <Img src="img/salad1.png" />
+      <Img src="img/salad.png" />
     </Section>
   );
 };

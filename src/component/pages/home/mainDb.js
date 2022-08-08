@@ -19,7 +19,7 @@ export const section1Db = [
   },
   {
     id: 2,
-    imgUrl: "img/steak2.png",
+    imgUrl: "img/steak4.png",
     subtitle: "골든 프리미어 엘본",
     title: "GOLDEN PREMIER L-BONE",
     origin: "쇠고기 : 미국산 600 ~ 850g",
@@ -28,7 +28,7 @@ export const section1Db = [
   },
   {
     id: 3,
-    imgUrl: "img/steak3.png",
+    imgUrl: "img/steak5.png",
     subtitle: "스모크 우드박스 안심 스테이크",
     title: "SMOKE WOODBOX TENDERLION STEAK",
     origin: "쇠고기 : 호주산 260g",

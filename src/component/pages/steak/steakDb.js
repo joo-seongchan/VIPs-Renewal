@@ -8,7 +8,7 @@ export const steakDb1 = {
       origin: "쇠고기 : 미국산 600~1000g",
       unit: "100g당",
       price: "19,000",
-      imgurl: "gray",
+      imgurl: "img/tomahawk.png",
     },
     {
       id: 1,
@@ -17,7 +17,7 @@ export const steakDb1 = {
       origin: "쇠고기 : 미국산 700~850g",
       unit: "100g당",
       price: "17,000",
-      imgurl: "lightgray",
+      imgurl: "img/porterhouse.png",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export const steakDb1 = {
       origin: "쇠고기 : 미국산 600~850g",
       unit: "100g당",
       price: "15,000",
-      imgurl: "black",
+      imgurl: "img/L-bone.png",
     },
   ],
 };
@@ -41,7 +41,7 @@ export const steakDb2 = {
       origin: "쇠고기 : 호주산 260g",
       unit: "",
       price: "44,500",
-      imgurl: "gray",
+      imgurl: "img/signature.png",
     },
     {
       id: 1,
@@ -50,7 +50,7 @@ export const steakDb2 = {
       origin: "쇠고기 : 호주산 400g",
       unit: "",
       price: "42,500",
-      imgurl: "lightgray",
+      imgurl: "img/signature.png",
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ export const steakDb2 = {
       origin: "쇠고기 :호주산 350g",
       unit: "",
       price: "40,500",
-      imgurl: "black",
+      imgurl: "img/signature.png",
     },
   ],
 };
@@ -74,7 +74,7 @@ export const steakDb3 = {
       origin: "쇠고기 : 호주산 150g",
       unit: "",
       price: "27,500",
-      imgurl: "gray",
+      imgurl: "img/yumstone.png",
     },
     {
       id: 1,
@@ -83,7 +83,7 @@ export const steakDb3 = {
       origin: "쇠고기 : 호주산 220g",
       unit: "",
       price: "26,500",
-      imgurl: "lightgray",
+      imgurl: "img/yumstone.png",
     },
     {
       id: 2,
@@ -92,7 +92,7 @@ export const steakDb3 = {
       origin: "쇠고기 :호주산 210g",
       unit: "",
       price: "25,500",
-      imgurl: "black",
+      imgurl: "img/yumstone.png",
     },
   ],
 };

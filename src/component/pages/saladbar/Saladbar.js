@@ -1,4 +1,6 @@
+import { ScrollTop } from "../../../ScrollTop";
 import { Container } from "../../Container";
+import { PageTitle } from "../../PageTitle";
 import { SaladSection1 } from "./SaladSection1";
 import { SaladSection2 } from "./SaladSection2";
 import { SaladSection3 } from "./SaladSection3";
@@ -11,6 +13,8 @@ import { SaladSection8 } from "./SaladSection8";
 export const Saladbar = () => {
   return (
     <>
+      <PageTitle title={"Salad bar"} />
+      <ScrollTop />
       <Container>
         <SaladSection1 />
         <SaladSection2 />

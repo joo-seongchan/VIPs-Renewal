@@ -199,7 +199,7 @@ const Button = styled.button`
 const Img = styled.div`
   width: 735px;
   height: 840px;
-  background: url(img/reserve1.png) no-repeat center/cover;
+  background: url(img/reserve3.png) no-repeat center/cover;
   transform: translateY(-50px);
 `;
 const ImgCover = styled.div`

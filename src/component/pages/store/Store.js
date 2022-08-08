@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import { ScrollTop } from "../../../ScrollTop";
+import { PageTitle } from "../../PageTitle";
 
 const storeDb = [
   {
@@ -153,7 +155,9 @@ export const Store = () => {
   };
   console.log(searchData);
   return (
-    <div>
+    <>
+      <PageTitle title={"Store"} />
+      <ScrollTop />
       <Banner>
         <Bg>
           <Des>우리동네에서 가장 가까운 빕스 매장은?</Des>
@@ -187,6 +191,6 @@ export const Store = () => {
           </Con>
         ))}
       </ConWrap>
-    </div>
+    </>
   );
 };

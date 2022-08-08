@@ -9,23 +9,9 @@ const Section = styled.section`
 const Title = styled.div`
   font-size: 60px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 `;
-const BoxWrap = styled.div`
-  display: flex;
-  margin-bottom: 35px;
-`;
-const Box = styled.div`
-  width: 240px;
-  height: 65px;
-  border: 1px solid white;
-  font-size: 28px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 25px;
-`;
+
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -35,6 +21,11 @@ const ConWrap = styled.div`
 const Con = styled.div`
   min-width: 400px;
   border: 1px solid rgba(112, 112, 112, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 const Img = styled.img`
   width: 100%;
@@ -114,27 +105,24 @@ export const Section1 = () => {
   return (
     <Section>
       <Title>ENJOY STEAK</Title>
-      <BoxWrap>
-        <Box style={{ background: "black" }}>TOMAHAWK</Box>
-        <Box>PORTERHOUSE</Box>
-        <Box>L-BONE</Box>
-        <Box>TENDERLION</Box>
-      </BoxWrap>
+
       <ConWrap>
         {section1Db.map((db) => (
           <Con key={db.id}>
-            <Img src={db.imgUrl} />
-            <TextWrap>
-              <SubTitle>{db.subtitle}</SubTitle>
-              <MainTitle>{db.title}</MainTitle>
-              <PriceWrap>
-                <Unit>{db.origin}</Unit>
-                <Price>
-                  {db.unit}
-                  <span>{db.price}</span>
-                </Price>
-              </PriceWrap>
-            </TextWrap>
+            <Link to="/steak">
+              <Img src={db.imgUrl} />
+              <TextWrap>
+                <SubTitle>{db.subtitle}</SubTitle>
+                <MainTitle>{db.title}</MainTitle>
+                <PriceWrap>
+                  <Unit>{db.origin}</Unit>
+                  <Price>
+                    {db.unit}
+                    <span>{db.price}</span> 원
+                  </Price>
+                </PriceWrap>
+              </TextWrap>
+            </Link>
           </Con>
         ))}
       </ConWrap>

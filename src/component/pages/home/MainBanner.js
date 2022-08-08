@@ -20,7 +20,7 @@ const Bg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-50%);
+  transform: translateX(-45%);
 `;
 const Bg2 = styled.div`
   width: 50%;
