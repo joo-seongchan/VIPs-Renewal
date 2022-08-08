@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/VIPs-Renewal/static/js/main.574ba7b9.js",
+    "main.js": "/VIPs-Renewal/static/js/main.49655c0b.js",
     "index.html": "/VIPs-Renewal/index.html",
-    "main.574ba7b9.js.map": "/VIPs-Renewal/static/js/main.574ba7b9.js.map"
+    "main.49655c0b.js.map": "/VIPs-Renewal/static/js/main.49655c0b.js.map"
   },
   "entrypoints": [
-    "static/js/main.574ba7b9.js"
+    "static/js/main.49655c0b.js"
   ]
 }
